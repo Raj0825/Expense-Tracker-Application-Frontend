@@ -164,7 +164,7 @@
 
             <!-- BUTTONS -->
             <div class="save-row">
-                <a href="/expenses.html" class="btn-ghost"
+                <a href="expenses.html" class="btn-ghost"
                    style="padding:15px 22px;text-decoration:none;text-align:center;border-radius:13px;font-size:14px;display:flex;align-items:center;justify-content:center">
                     Cancel
                 </a>
@@ -316,7 +316,7 @@
       spin('saveBtn',false);
       if(d?.success||d?.id){
         showToast(urlId?'Expense updated!':'Expense saved!');
-        setTimeout(()=>window.location.href='/expenses.html',800);
+        setTimeout(()=>window.location.href='expenses.html',800);
       } else {
         showToast(d?.message||'Failed to save','error');
       }

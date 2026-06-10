@@ -279,7 +279,7 @@
       document.getElementById('recentList').innerHTML = recent.length
         ? recent.map(e=>{
             const c=getCat(e.category);
-            return `<div class="recent-row" onclick="window.location='/expenses.html'">
+            return `<div class="recent-row" onclick="window.location='expenses.html'">
               <div class="recent-icon" style="background:${c.color}18">${c.icon}</div>
               <div style="flex:1">
                 <div class="recent-title">${e.title}</div>
