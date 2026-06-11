@@ -26,19 +26,6 @@
 
 ---
 
-## 📸 Screenshots
-
-| Page | Description |
-|---|---|
-| 🔐 Login/Register | Clean auth UI with toggle |
-| 📊 Dashboard | Stat cards, bar chart, donut pie chart |
-| 💳 Expenses | Paginated list with filters |
-| ➕ Add Expense | Category selector, payment method |
-| 📈 Reports | Monthly spending breakdown |
-| 💡 Suggestions | Smart financial insights |
-
----
-
 ## ✨ Features
 
 - 🔐 **Login & Register** — JWT token auth, stored in localStorage
