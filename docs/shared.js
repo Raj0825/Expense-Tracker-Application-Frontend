@@ -89,13 +89,13 @@ function renderSidebar(active){
   const user=getUser()||{};
   const initial=(user.name||'U')[0].toUpperCase();
   const nav=[
-      {id:'dashboard',icon:'📊',label:'Dashboard',href:'/dashboard.html'},
-      {id:'expenses',icon:'💳',label:'Expenses',href:'/expenses.html'},
-      {id:'add',icon:'➕',label:'Add Expense',href:'/add-expense.html'},
-      {id:'reports',icon:'📈',label:'Monthly Reports',href:'/reports.html'},
-      {id:'suggestions',icon:'💡',label:'Suggestions',href:'/suggestions.html'},
-      {id:'settings',icon:'⚙️',label:'Settings',href:'/profile.html'},
-      {id:'tools',icon:'🧮',label:'Financial Tools',href:'/financial-tools.html'},
+     {id:'dashboard', icon:'📊', label:'Dashboard',        href: BASE + '/dashboard.html'},
+{id:'expenses',  icon:'💳', label:'Expenses',          href: BASE + '/expenses.html'},
+{id:'add',       icon:'➕', label:'Add Expense',        href: BASE + '/add-expense.html'},
+{id:'reports',   icon:'📈', label:'Monthly Reports',   href: BASE + '/reports.html'},
+{id:'suggestions',icon:'💡',label:'Suggestions',       href: BASE + '/suggestions.html'},
+{id:'settings',  icon:'⚙️', label:'Settings',          href: BASE + '/profile.html'},
+{id:'tools',     icon:'🧮', label:'Financial Tools',   href: BASE + '/financial-tools.html'},
   ];
   return `
   <aside class="sidebar">
