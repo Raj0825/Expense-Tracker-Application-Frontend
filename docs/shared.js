@@ -5,12 +5,21 @@ const API = 'https://spendsmart-api-ooqh.onrender.com/api';
 // AUTH HELPERS
 function getToken(){ return localStorage.getItem('token'); }
 function getUser(){ try{return JSON.parse(localStorage.getItem('user'));}catch{return null;} }
+// FROM:
 function requireAuth(){
   if(!getToken()){ window.location.href='/login.html'; return false; }
   return true;
 }
 function logout(){ localStorage.clear(); window.location.href='/login.html'; }
 
+// TO:
+const BASE = '/Expense-Tracker-Application-Frontend';
+
+function requireAuth(){
+  if(!getToken()){ window.location.href= BASE + '/login.html'; return false; }
+  return true;
+}
+function logout(){ localStorage.clear(); window.location.href = BASE + '/login.html'; }
 // API HELPER
 async function apiFetch(path, opts={}){
   const headers = {'Content-Type':'application/json'};
