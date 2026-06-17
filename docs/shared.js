@@ -1,6 +1,6 @@
 // ============ SHARED.JS — SpendSmart ============
 // Use relative URL - works on any domain
-const API = '/api';
+const API = 'https://spendsmart-api-ooqh.onrender.com/api';
 
 // AUTH HELPERS
 function getToken(){ return localStorage.getItem('token'); }
