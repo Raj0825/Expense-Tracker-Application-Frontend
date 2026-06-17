@@ -1,16 +1,16 @@
 // ============ SHARED.JS — SpendSmart ============
 // Use relative URL - works on any domain
 const API = 'https://spendsmart-api-ooqh.onrender.com/api';
-
+const BASE = '/Expense-Tracker-Application-Frontend';
 // AUTH HELPERS
 function getToken(){ return localStorage.getItem('token'); }
 function getUser(){ try{return JSON.parse(localStorage.getItem('user'));}catch{return null;} }
 // FROM:
 function requireAuth(){
-  if(!getToken()){ window.location.href='/login.html'; return false; }
+  if(!getToken()){ window.location.href = BASE + '/login.html'; return false; }
   return true;
 }
-function logout(){ localStorage.clear(); window.location.href='/login.html'; }
+function logout(){ localStorage.clear(); window.location.href = BASE + '/login.html'; }
 
 // TO:
 const BASE = '/Expense-Tracker-Application-Frontend';
@@ -88,15 +88,15 @@ function showToast(msg,type='success'){
 function renderSidebar(active){
   const user=getUser()||{};
   const initial=(user.name||'U')[0].toUpperCase();
-  const nav=[
-     {id:'dashboard', icon:'📊', label:'Dashboard',        href: BASE + '/dashboard.html'},
-{id:'expenses',  icon:'💳', label:'Expenses',          href: BASE + '/expenses.html'},
-{id:'add',       icon:'➕', label:'Add Expense',        href: BASE + '/add-expense.html'},
-{id:'reports',   icon:'📈', label:'Monthly Reports',   href: BASE + '/reports.html'},
-{id:'suggestions',icon:'💡',label:'Suggestions',       href: BASE + '/suggestions.html'},
-{id:'settings',  icon:'⚙️', label:'Settings',          href: BASE + '/profile.html'},
-{id:'tools',     icon:'🧮', label:'Financial Tools',   href: BASE + '/financial-tools.html'},
-  ];
+ const nav=[
+  {id:'dashboard',  icon:'📊', label:'Dashboard',       href: BASE + '/dashboard.html'},
+  {id:'expenses',   icon:'💳', label:'Expenses',         href: BASE + '/expenses.html'},
+  {id:'add',        icon:'➕', label:'Add Expense',      href: BASE + '/add-expense.html'},
+  {id:'reports',    icon:'📈', label:'Monthly Reports',  href: BASE + '/reports.html'},
+  {id:'suggestions',icon:'💡', label:'Suggestions',      href: BASE + '/suggestions.html'},
+  {id:'settings',   icon:'⚙️', label:'Settings',         href: BASE + '/profile.html'},
+  {id:'tools',      icon:'🧮', label:'Financial Tools',  href: BASE + '/financial-tools.html'},
+];
   return `
   <aside class="sidebar">
     <div class="sidebar-logo">
